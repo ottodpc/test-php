@@ -21,6 +21,35 @@
   if( $var_isset && $var_empty != true) echo "Bonjour"." ".$variable;
   else echo "Bonjour"." ".$variable;
   
+  echo "<br>";
+  # array
+  $array = array("1", "2", "3", "4");
+  $array_in_array = array(
+    array("1", "2", "3", "4"),
+    array("A", "B", "C", "D"),
+  );
+  $array_length = count($array);
+  for ($i=0; $i < $array_length; $i++) { 
+    # print array element
+    echo $array[$i].", ";
+  }
+  echo "<br>";
+  for($i=0; $i<count($array_in_array); $i++){
+    echo "<br>";
+    for($j=0; $j<count($array_in_array[$i]); $j++){
+      echo $array_in_array[$i][$j].", ";
+    }
+    echo "<br>";
+  }
+  echo "<br>";
+  # NOTE associative array
+  $associative_array = array("France"=>"Paris", "Tacos"=>"Viande", "Pizza"=>"4 Fromages");
+  foreach ($associative_array as $key => $value) {
+    echo "La clé du tableau est ".$key." et sa valeur est ".$value.". ";
+  }
+
+
+
   ?> 
   </h1>
 </body>
